@@ -1,0 +1,82 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 2, MPI-IO part   
+#------------------------------------------------------------
+# Date                  : Mon Mar 25 17:14:38 2019
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.14.91+
+# Version               : #1 SMP Wed Jan 23 21:34:58 PST 2019
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /home/openmpi/mpi-benchmarks/IMB-IO
+
+# Minimum io portion in bytes:   0
+# Maximum io portion in bytes:   4194304
+#
+#
+#
+
+# List of Benchmarks to run:
+
+# S_Write_Indv
+# S_IWrite_Indv
+# S_Write_Expl
+# S_IWrite_Expl
+# P_Write_Indv
+# P_IWrite_Indv
+# P_Write_Shared
+# P_IWrite_Shared
+# P_Write_Priv
+# P_IWrite_Priv
+# P_Write_Expl
+# P_IWrite_Expl
+# C_Write_Indv
+# C_IWrite_Indv
+# C_Write_Shared
+# C_IWrite_Shared
+# C_Write_Expl
+# C_IWrite_Expl
+# S_Read_Indv
+# S_IRead_Indv
+# S_Read_Expl
+# S_IRead_Expl
+# P_Read_Indv
+# P_IRead_Indv
+# P_Read_Shared
+# P_IRead_Shared
+# P_Read_Priv
+# P_IRead_Priv
+# P_Read_Expl
+# P_IRead_Expl
+# C_Read_Indv
+# C_IRead_Indv
+# C_Read_Shared
+# C_IRead_Shared
+# C_Read_Expl
+# C_IRead_Expl
+# Open_Close
+
+
+# For nonblocking benchmarks:
+
+# Function CPU_Exploit obtains an undisturbed
+# performance of  268.30 MFlops
+
+#---------------------------------------------------
+# Benchmarking S_Write_Indv 
+# #processes = 1 
+# ( 2 additional processes waiting in MPI_Barrier)
+#---------------------------------------------------
+#
+#    MODE: AGGREGATE 
+#
+       #bytes #repetitions      t[usec]   Mbytes/sec
+            0         1000         0.38         0.00
+            1         1000         4.97         0.20
+            2         1000         4.83         0.41
+            4         1000         4.50         0.89
+            8         1000         5.84         1.37
