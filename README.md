@@ -1,21 +1,28 @@
 # k8s-openmpi-experiments
-Contains experiments executed on top of the k8s-openmpi repository
-
-# GCE Small MPI Cluster Setup
-Cluster size = 3 Nodes
-Node version = 1.11.7-gke.12
-Node image = Container Optimized OS (cos)
-Node type = n1-standard-1 (1vCPU, 3.75 GB of memory)
-Node disk = 100G
- 
-
-# GCE Medium MPI Cluster Setup
-Cluster size = 6 Nodes
-Node version = 1.11.7-gke.12
-Node image = Container Optimized OS (cos)
-Node type = n1-standard-1 (1vCPU, 3.75 GB of memory)
-Node disk = 100G
+Data from experiments executed on top of the k8s-openmpi repository code.
 
 # Experiments
-* Small Cluster Anti-Affinity Experiment – execute MPI Benchmarks Target of Measurement on the Small Cluster (3 nodes) with anti-affinity rule of type one container (pod) per cluster node.
-* Medium Cluster Container Overlapping – execute MPI Benchmarks Target of Measurement on the Medium Cluster (6 nodes) without any affinity rules, where the size of the MPI cluster is 10 containers, on average two containers (pods) per cluster node.
+* Running Container-Based MPI Cluster on shared hosts – the MPI cluster consist of four container nodes each running in compliance with host-bound anti-affinity rule guaranteeing that the Kubernetes scheduler will place and maintain each one of the nodes on a separate container platform host.
+* Running Container-Based MPI Cluster on exclusive hosts - the MPI cluster consist of four container nodes running in compliance with host-bound affinity rule guaranteeing that the Kubernetes scheduler will place and maintain every two of the nodes on a same container platform host.
+
+# GCE MPI Cluster Properties
+* Four Nodes Cluster deployed on Two Hosts
+    * Host version = 1.11.7-gke.12
+    * Host image = Container Optimized OS (cos)
+    * Host type = n1-standard-1 (2vCPU, 4 GB of memory)
+    * Host disk = 100G
+* Four Nodes Cluster deployed on Four Hosts
+    * Host version = 1.11.7-gke.12
+    * Host image = Container Optimized OS (cos)
+    * Host type = n1-standard-1 (2vCPU, 4 GB of memory)
+    * Host disk = 100G
+* Three Nodes Cluster deployed on Three Hosts
+    * Host version = 1.11.7-gke.12
+    * Host image = Container Optimized OS (cos)
+    * Host type = n1-standard-1 (1vCPU, 3.75 GB of memory)
+    * Host disk = 100G
+* Ten Nodes Cluster deployed on Six Hosts
+    * Host version = 1.11.7-gke.12
+    * Host image = Container Optimized OS (cos)
+    * Host type = n1-standard-1 (1vCPU, 3.75 GB of memory)
+    * Host disk = 100G
